@@ -40,7 +40,7 @@ const (
 	FileServiceQiniu FileService = "qiniu"
 	// FileServiceAws aws s3
 	FileServiceAws FileService = "aws"
-	// FileServiceOBS
+	// FileServiceOBS huawei obs
 	FileServiceOBS FileService = "obs"
 )
 
@@ -583,6 +583,12 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.OSS.AccessKeyID = c.getString("oss.accessKeyID", c.OSS.AccessKeyID)
 	c.OSS.AccessKeySecret = c.getString("oss.accessKeySecret", c.OSS.AccessKeySecret)
 	c.OSS.BucketName = c.getString("oss.bucketName", c.OSS.BucketName)
+	// huawei obs
+	c.OBS.Endpoint = c.getString("obs.endpoint", c.OBS.Endpoint)
+	c.OBS.BucketURL = c.getString("obs.bucketURL", c.OBS.BucketURL)
+	c.OBS.AccessKeyID = c.getString("obs.accessKeyID", c.OBS.AccessKeyID)
+	c.OBS.AccessKeySecret = c.getString("obs.accessKeySecret", c.OBS.AccessKeySecret)
+	c.OBS.BucketName = c.getString("obs.bucketName", c.OBS.BucketName)
 	// aws s3
 	c.AWS.Bucket = c.getString("aws.bucket", c.AWS.Bucket)
     c.AWS.Region = c.getString("aws.region", c.AWS.Region)
