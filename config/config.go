@@ -40,6 +40,8 @@ const (
 	FileServiceQiniu FileService = "qiniu"
 	// FileServiceAws aws s3
 	FileServiceAws FileService = "aws"
+	// FileServiceOBS
+	FileServiceOBS FileService = "obs"
 )
 
 func (u FileService) String() string {
@@ -135,6 +137,7 @@ type Config struct {
 
 	FileService FileService   // 文件服务
 	OSS         OSSConfig     // 阿里云oss配置
+	OBS         OBSConfig //华为云obs配置
 	AWS         AwsConfig		// AWS配置
 	Minio       MinioConfig   // minio配置
 	Seaweed     SeaweedConfig // seaweedfs配置
@@ -970,6 +973,14 @@ type OSSConfig struct {
 	Endpoint        string
 	BucketName      string // Bucket名称 比如 tangsengdaodao
 	BucketURL       string // 文件下载地址域名 对应aliyun的Bucket域名
+	AccessKeyID     string
+	AccessKeySecret string
+}
+
+type OBSConfig struct {
+	Endpoint        string
+	BucketName      string
+	BucketURL       string
 	AccessKeyID     string
 	AccessKeySecret string
 }
