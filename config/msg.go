@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/common"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/network"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/util"
+	"github.com/laojie0524/TSDDServerLib/common"
+	"github.com/laojie0524/TSDDServerLib/pkg/network"
+	"github.com/laojie0524/TSDDServerLib/pkg/util"
 	"github.com/sendgrid/rest"
 	"github.com/tidwall/gjson"
 	"go.uber.org/zap"

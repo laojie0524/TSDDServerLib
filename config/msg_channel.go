@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/common"
+	"github.com/laojie0524/TSDDServerLib/common"
 	"go.uber.org/zap"
 )
 
