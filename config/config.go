@@ -591,6 +591,7 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.OBS.BucketName = c.getString("obs.bucketName", c.OBS.BucketName)
 	// aws s3
 	c.AWS.Bucket = c.getString("aws.bucket", c.AWS.Bucket)
+	c.AWS.BucketURL = c.getString("aws.bucketURL", c.AWS.BucketURL)
     c.AWS.Region = c.getString("aws.region", c.AWS.Region)
     c.AWS.SecretID = c.getString("aws.secretID", c.AWS.SecretID)
     c.AWS.SecretKey = c.getString("aws.secretKey", c.AWS.SecretKey)
@@ -993,6 +994,7 @@ type OBSConfig struct {
 
 type AwsConfig struct {
 	Bucket           string
+	BucketURL        string
 	Region           string
 	Endpoint         string
 	SecretID         string
